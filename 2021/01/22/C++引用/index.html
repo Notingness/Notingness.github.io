@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>文章分类 | SpacetimeNo</title>
+  <title>C++引用 | SpacetimeNo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="引用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++引用">
+<meta property="og:url" content="http://example.com/2021/01/22/C++%E5%BC%95%E7%94%A8/index.html">
 <meta property="og:site_name" content="SpacetimeNo">
+<meta property="og:description" content="引用">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-08-19T03:48:35.000Z">
-<meta property="article:modified_time" content="2021-01-23T14:08:18.493Z">
+<meta property="article:published_time" content="2021-01-21T21:26:48.000Z">
+<meta property="article:modified_time" content="2021-01-23T20:38:32.024Z">
 <meta property="article:author" content="Notingness">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="SpacetimeNo" type="application/atom+xml">
@@ -175,26 +178,257 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article class="article">
-  <h3 class="category-count">共计 1 个分类, 1 个标签</h3>
+            
+
+    <i class="fa fa-thumb-tack"></i>
+    <font color=7D26CD>置顶</font>
+    <span class="post-meta-divider">|</span>
+  <article id="post-C++引用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-  <ul class="category-list">
+    <h1 class="article-title" itemprop="name">
+      C++引用
+    </h1>
+  
+
+<!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2021/01/22/C++%E5%BC%95%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-01-21T21:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><a id="more"></a>
+<h2 id="1-引用的基本使用"><a href="#1-引用的基本使用" class="headerlink" title="1.引用的基本使用"></a>1.引用的基本使用</h2><blockquote>
+<p>作用：给变量起别名<br>语法：数据类型 &amp;别名 = 原名</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a &#x3D; 10;</span><br><span class="line">int &amp;b &#x3D; a;</span><br></pre></td></tr></table></figure>
+<h2 id="2-引用的注意事项"><a href="#2-引用的注意事项" class="headerlink" title="2.引用的注意事项"></a>2.引用的注意事项</h2><ul>
+<li>引用必须初始化 </li>
+<li>引用在初始化后，不可以改变</li>
+</ul>
+<h2 id="3-引用做函数参数"><a href="#3-引用做函数参数" class="headerlink" title="3.引用做函数参数"></a>3.引用做函数参数</h2><ul>
+<li>作用：函数传参时，可以利用引用的技术让形参修饰实参</li>
+<li>优点：可以简化指针修改实参</li>
+</ul>
+<h2 id="4-引用做函数的返回值"><a href="#4-引用做函数的返回值" class="headerlink" title="4.引用做函数的返回值"></a>4.引用做函数的返回值</h2><ul>
+<li>注意：不要返回局部变量的引用</li>
+<li>用法：函数调用作为左值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reste() &#x3D; 1000&#x2F;&#x2F;reste()作为引用某变量的别名</span><br></pre></td></tr></table></figure>
+<h2 id="5-引用的本质"><a href="#5-引用的本质" class="headerlink" title="5.引用的本质"></a>5.引用的本质</h2></li>
+<li>本质：引用的本质在C++内部实现是一个指针常量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;发现是引用，转换为int*const ref &#x3D; &amp;a;</span><br><span class="line">void func(int &amp;ref)&#123;</span><br><span class="line">    ref &#x3D; 100;&#x2F;&#x2F;ref是引用，转换为*ref &#x3D; 100</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int a &#x3D; 10;</span><br><span class="line">    &#x2F;&#x2F;自动转换为 int * const ref &#x3D; &amp;a;指针常量是指针指向不可改变，也说明为什么引用不可更改</span><br><span class="line"></span><br><span class="line">    int &amp; ref &#x3D; a;</span><br><span class="line">    ref &#x3D; 20;&#x2F;&#x2F;内部发现ref是引用，自动帮我们转换为：*ref &#x3D;29;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;a:&quot;&lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; &quot;ref: &quot;&lt;&lt; ref &lt;&lt; edl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6-常量引用"><a href="#6-常量引用" class="headerlink" title="6.常量引用"></a>6.常量引用</h2></li>
+<li>作用：常量引用主要用来修饰形参，防止误操作  </li>
+<li>在函数形参列表中，可以加const修饰形参，防止形参改变实参<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const int &amp; ref &#x3D; 10;</span><br><span class="line">这相当于：</span><br><span class="line">编译器临时创建一个变量int temp &#x3D; 10;const int &amp; ref &#x3D; temp;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+    
+      <div class="declare">
+        <strong>本文作者：</strong>
+        
+          Notingness
+        
+        <br>
+        <strong>本文链接：</strong>
+        http://example.com/2021/01/22/C++%E5%BC%95%E7%94%A8/
+        <br>
+        <strong>版权声明：</strong>
+        本作品采用
+        <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+        进行许可。转载请注明出处！
+        
+          <br>
+          <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+        
+      </div>
     
       
-        <li class="category-list-item">
-          <a href="/categories/C/" class="category-list-link" title="C++">
-            C++
-            <span class="category-list-count">6</span>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
           </a>
-        </li>
+        </div>
       
-    
-  </ul>
-  
-  <div class="tag-cloud">
-    <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 20px;">随笔</a>
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/C//" class="article-tag-list-link color4">C++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=Notingness.github.io/021/01/22/C++%E5%BC%95%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/22/C++%E5%89%8D%E4%B8%80%E5%91%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++前一周</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BC%95%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">1.引用的基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%95%E7%94%A8%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.2.</span> <span class="toc-text">2.引用的注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BC%95%E7%94%A8%E5%81%9A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">3.引用做函数参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8%E5%81%9A%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">1.4.</span> <span class="toc-text">4.引用做函数的返回值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%BC%95%E7%94%A8%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-number">1.5.</span> <span class="toc-text">5.引用的本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8"><span class="toc-number">1.6.</span> <span class="toc-text">6.常量引用</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
           </div>
         </div>
       </div>
@@ -218,7 +452,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
