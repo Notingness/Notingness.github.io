@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>我的一个博客 | SpacetimeNo</title>
+  <title>C++前一周 | SpacetimeNo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的博客编写">
+  <meta name="description" content="C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的一个博客">
+<meta property="og:title" content="C++前一周">
 <meta property="og:url" content="http://example.com/2021/01/22/%E6%88%91%E7%9A%84%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="SpacetimeNo">
-<meta property="og:description" content="我的博客编写">
+<meta property="og:description" content="C++">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=119835866,2340977400&fm=26&gp=0.jpg">
 <meta property="article:published_time" content="2021-01-21T21:26:48.000Z">
-<meta property="article:modified_time" content="2021-01-23T14:16:33.831Z">
+<meta property="article:modified_time" content="2021-01-23T16:18:56.139Z">
 <meta property="article:author" content="Notingness">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=119835866,2340977400&fm=26&gp=0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="SpacetimeNo" type="application/atom+xml">
   
@@ -188,7 +186,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我的一个博客
+      C++前一周
     </h1>
   
 
@@ -212,23 +210,74 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="我的博客编写"><a href="#我的博客编写" class="headerlink" title="我的博客编写"></a>我的博客编写</h1><a id="more"></a>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><blockquote>
-<p>niheod</p>
+        <h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><a id="more"></a>
+<h2 id="1-C-基础"><a href="#1-C-基础" class="headerlink" title="1.C++基础"></a>1.C++基础</h2><blockquote>
+<p>1.通用的C++基础结构：C++的头文件没有扩展名h，而C语言有。但C++仍可以使用扩展名h的头文件<br>C++中存在名称空间，使用它可以让编译器知道自己想要使用哪个厂商的产品，所以C++使用不同的名称空间来区分同一函数的不同版本<br>#include<iostream>//使得预处理器将iostream文件的内容添加到程序中<br>using namespace std;//C++中可以不使用using这个预编译指令，但输入输出中的代码将这样写：std::cout&lt;&lt;“hello world”;</p>
 </blockquote>
-<p><a href="www.baidu.com">百度</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=119835866,2340977400&fm=26&gp=0.jpg" alt="jasid"></p>
-<h2 id="无序"><a href="#无序" class="headerlink" title="无序"></a>无序</h2><ul>
-<li>无序</li>
-<li>无序<h2 id="有序"><a href="#有序" class="headerlink" title="有序"></a>有序</h2></li>
-</ul>
-<ol>
-<li>有序</li>
-<li>有序</li>
-<li>有序</li>
-</ol>
+<p>通用C++结构：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;  </span><br><span class="line">using namespace std;  </span><br><span class="line">int main()&#123;  </span><br><span class="line">system(“pause”);  </span><br><span class="line">return 0;&#125;</span><br></pre></td></tr></table></figure><br>（经过测试C与C++的main（）函数中最后的这一句return 0不写也可以运行程序，经查询发现标准中规定如果main（）函数中从上往下没有return 语句，则程序在编译时会默认最后结尾有return 0）</p>
+<blockquote>
+<p>关键字:using；然后需要根据要使用的命名空间写出空间名字；<br> 另一个关键字：namespace（名字空间），最后写出iostream的关键字是std；std里面有cin/cout、endl;</p>
+</blockquote>
 <hr>
-<hr>
+<h2 id="2-输入、输出和注释："><a href="#2-输入、输出和注释：" class="headerlink" title="2.输入、输出和注释："></a>2.输入、输出和注释：</h2><blockquote>
+<p>cout&lt;&lt;“任意文字或英文”&lt;&lt;变量&lt;&lt;“任意中文或英语”&lt;&lt;endl;<br>endl与C中的\n功能类似。<br>程序可以写成:<br>Cout&lt;&lt; “ding”&lt;&lt;endl;或<br>Cout&lt;&lt; “ding\n”&lt;&lt;endl;<br>在C++中的注释和C一样，都是以//或/**/这两个来进行注释（注释还是<br>挺重要的，某些难以理解的算法自己理解写了后，都应该写注释，否则时<br>久了再看这行代码反而难以理解自己写这段代码的意思，造成白白学了该<br>算法或方法）</p>
+</blockquote>
+<p>从键盘上输入信息使用:</p>
+<blockquote>
+<p>cin&gt;&gt;常量</p>
+</blockquote>
+<h2 id="3-常量与变量"><a href="#3-常量与变量" class="headerlink" title="3.常量与变量"></a>3.常量与变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define 宏常量:常量名 常量值  </span><br><span class="line">Const修饰的变量:const 数据类型 常量名 &#x3D; 常量值</span><br></pre></td></tr></table></figure>
+<h2 id="4-关键字"><a href="#4-关键字" class="headerlink" title="4.关键字"></a>4.关键字</h2><blockquote>
+<p>关键字：定义变量时不可以使用C++中的关键字</p>
+</blockquote>
+<h2 id="5-标识符命名规则："><a href="#5-标识符命名规则：" class="headerlink" title="5.标识符命名规则："></a>5.标识符命名规则：</h2><blockquote>
+<p>一：标识符不可以是关键字<br>  二：标识符只能由字母、数字、下划线组成<br>  三：第一个字符必须为字母或下划线<br>  四：标识符中字母区分大小</p>
+</blockquote>
+<h2 id="6-数据类型"><a href="#6-数据类型" class="headerlink" title="6.数据类型"></a>6.数据类型</h2><blockquote>
+<p>short:两字节，int:4字节，long:4字节，long long:8字节用于节省空间<br>sizeof:可以用来统计数据类型所占内存大小（sizeof（数据类型/变量））</p>
+</blockquote>
+<h2 id="7-实型"><a href="#7-实型" class="headerlink" title="7.实型"></a>7.实型</h2><blockquote>
+<p>实型（浮点型）：单精度（float：4字节），双精度（double：8个字节）<br>有效数据范围：单精度（7位有效数据），双精度（15~16位有效数据）</p>
+</blockquote>
+<h2 id="8-字符型"><a href="#8-字符型" class="headerlink" title="8.字符型"></a>8.字符型</h2><blockquote>
+<p>作用：字符型变量用于显示单个字符<br>语法：char 任意字母 =‘任意字母’<br>注意1：在显示字符型变量时，用单引号括起来，不要用双引号<br>注意2：单引号内只能有一个字符，不可以是字符串<br>注意3：C和C++中字符型变量只占一个字节</p>
+</blockquote>
+<h2 id="9-转义字符"><a href="#9-转义字符" class="headerlink" title="9.转义字符"></a>9.转义字符</h2><blockquote>
+<p>常见的转义字符：换行（\n）、水平制表（\t）</p>
+</blockquote>
+<h2 id="10-字符串型"><a href="#10-字符串型" class="headerlink" title="10.字符串型"></a>10.字符串型</h2><blockquote>
+<p>一、C的字符串：char 变量名{}= “字符串值”C++中仍可使用<br>二、C++风格：string 变量名 = “字符串值”</p>
+</blockquote>
+<h2 id="11-布尔类型"><a href="#11-布尔类型" class="headerlink" title="11.布尔类型"></a>11.布尔类型</h2><blockquote>
+<p>bool类型只有两个值true-真或false-假,bool只占一个字节</p>
+</blockquote>
+<h2 id="12-循环结构"><a href="#12-循环结构" class="headerlink" title="12.循环结构"></a>12.循环结构</h2><blockquote>
+<p>do while与while、for的区别-<br>do while 一定会先执行一次；<br>For用于确定循环次数或条件的循环否则使用while或do while</p>
+</blockquote>
+<h2 id="13-跳出循环语句"><a href="#13-跳出循环语句" class="headerlink" title="13.跳出循环语句"></a>13.跳出循环语句</h2><blockquote>
+<p>（1）break（2）continue（3）goto 标记（不建议使用）</p>
+</blockquote>
+<h2 id="14-函数的份文件编写"><a href="#14-函数的份文件编写" class="headerlink" title="14.函数的份文件编写"></a>14.函数的份文件编写</h2><blockquote>
+<p>(1)创建后缀名为.h的头文件<br>  (2)创建后缀名为.cpp的源文件<br>  (3)在头文件中写函数的声明<br>  (4)在源文件中写函数的定义 </p>
+</blockquote>
+<p>具体步骤先创建一个swap函数的头文件swap.h,并将其声明代码写入：<br>Void swap（int a,int b）;<br>然后在创建swap.cpp的源文件后，将swap函数的定义代码写入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&quot;swap.h&quot;&#x2F;&#x2F;include””代表使用自定义头文件</span><br><span class="line">using namespace std;</span><br><span class="line">void swap(int a, int b) &#123;</span><br><span class="line">	int temp &#x3D; a;</span><br><span class="line">	a &#x3D; b;</span><br><span class="line">	b &#x3D; temp;</span><br><span class="line">	cout &lt;&lt; a;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="15-指针"><a href="#15-指针" class="headerlink" title="15.指针"></a>15.指针</h2><blockquote>
+<p>指针在32位操作系统：占用4个字节，在64位操作系统:占用8个字节;<br>空指针用于给指针变量进行初始化：int*p=NULL;<br>空指针为系统占用，不可以访问<br>野指针别进行访问，会导致程序崩溃</p>
+</blockquote>
+<p>const修饰指针：</p>
+<blockquote>
+<p>(1)const修饰指针 const int <em>p指针的指向可以改，但指针指向的值不可以改<br> (2)const 修饰常量 int</em> const p指针的指向不可以改，但指针指向的值可以改<br> (3)const即修饰指针也修饰常量 const int* const p指针的指向和值都不可以改  </p>
+</blockquote>
+<h2 id="16-结构体定义和使用-语法"><a href="#16-结构体定义和使用-语法" class="headerlink" title="16.结构体定义和使用-语法"></a>16.结构体定义和使用-语法</h2><blockquote>
+<p>struct结构体名{结构体成员列表};</p>
+</blockquote>
+<p>创建结构体变量的三种方法:</p>
+<blockquote>
+<p>(1)struct 结构体名 变量名<br>(2)struct 结构体名 变量名={成员1值…}<br>(3)定义结构体时顺便创建变量</p>
+</blockquote>
+<p>结构体变量的定义的struct关键字可以省略，结构体可以嵌套<br>结构体数组的定义:struct 结构体名 数组名[元素个数]=<br>可以用指针访问结构体中的成员</p>
+<h2 id="19-编写通讯录管理系统"><a href="#19-编写通讯录管理系统" class="headerlink" title="19.编写通讯录管理系统"></a>19.编写通讯录管理系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">&#x2F;&#x2F;联系人结构体</span><br><span class="line">struct Person &#123;</span><br><span class="line">	string m_Name;&#x2F;&#x2F;姓名</span><br><span class="line">	int m_Sex;&#x2F;&#x2F;性别</span><br><span class="line">	int m_Age;&#x2F;&#x2F;年龄</span><br><span class="line">	string m_phone;&#x2F;&#x2F;电话</span><br><span class="line">	string m_Addr;&#x2F;&#x2F;住址 </span><br><span class="line">&#125;;</span><br><span class="line">#define MAX 500&#x2F;&#x2F;通讯录中最大可记录的人数，并方便以后程序的维护</span><br><span class="line">&#x2F;&#x2F;通讯录结构体</span><br><span class="line">struct Addressbooks &#123;</span><br><span class="line">	struct Person personArray[MAX];&#x2F;&#x2F;通讯录中保存的联系人数组</span><br><span class="line">	int m_Size;&#x2F;&#x2F;通讯录中的人员个数  </span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F;添加联系人</span><br><span class="line">void addPerson(Addressbooks* abs) &#123;</span><br><span class="line">	&#x2F;&#x2F;判断通讯录是否已满</span><br><span class="line">	if (abs-&gt;m_Size &#x3D;&#x3D; MAX) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;通讯录已满,无法继续添加！&quot; &lt;&lt; endl;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		&#x2F;&#x2F;添加具体联系人</span><br><span class="line">		string name;</span><br><span class="line">		cout &lt;&lt; &quot;请输入姓名&quot; &lt;&lt; endl;</span><br><span class="line">		cin &gt;&gt; name;</span><br><span class="line">		abs-&gt;personArray[abs-&gt;m_Size].m_Name &#x3D; name;</span><br><span class="line">		&#x2F;&#x2F;性别</span><br><span class="line">		cout &lt;&lt; &quot;请输入性别&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;1---男&quot; &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; &quot;2---女&quot; &lt;&lt; endl;</span><br><span class="line">		int sex &#x3D; 0;</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			cin &gt;&gt; sex;</span><br><span class="line">			if (sex &#x3D;&#x3D; 1 || sex &#x3D;&#x3D; 2) &#123;</span><br><span class="line">				abs-&gt;personArray[abs-&gt;m_Size].m_Sex &#x3D; sex;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			cout &lt;&lt; &quot;输入有误，请重新输入&quot; &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;年龄</span><br><span class="line">		cout &lt;&lt; &quot;请输入年龄&quot; &lt;&lt; endl;</span><br><span class="line">		int age &#x3D; 0;</span><br><span class="line">		cin &gt;&gt; age;</span><br><span class="line">		abs-&gt;personArray[abs-&gt;m_Size].m_Age &#x3D; age;</span><br><span class="line">		&#x2F;&#x2F;电话</span><br><span class="line">		cout &lt;&lt; &quot;请输入电话&quot; &lt;&lt; endl;</span><br><span class="line">		string phone;</span><br><span class="line">		cin &gt;&gt; phone;</span><br><span class="line">		abs-&gt;personArray[abs-&gt;m_Size].m_phone &#x3D; phone;</span><br><span class="line">		&#x2F;&#x2F;家庭住址</span><br><span class="line">		cout &lt;&lt; &quot;请输入家庭住址&quot; &lt;&lt; endl;</span><br><span class="line">		string address;</span><br><span class="line">		cin &gt;&gt; address;</span><br><span class="line">		abs-&gt;personArray[abs-&gt;m_Size].m_Addr &#x3D; address;</span><br><span class="line">		&#x2F;&#x2F;更新通讯录人数</span><br><span class="line">		abs-&gt;m_Size++;</span><br><span class="line">		cout &lt;&lt; &quot;添加成功&quot; &lt;&lt; endl;</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		system(&quot;cls&quot;);&#x2F;&#x2F;清屏</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void showMenu() &#123;</span><br><span class="line">	cout &lt;&lt; &quot;1、添加联系人&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;2、显示联系人&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;3、删除联系人&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;4、查找联系人&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;5、修改联系人&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;6、清空联系人&quot; &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;0、退出通讯录&quot; &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">	&#x2F;&#x2F;创建通讯录结构体变量</span><br><span class="line">	struct Addressbooks abs;</span><br><span class="line">	abs.m_Size &#x3D; 0;</span><br><span class="line">	int select &#x3D; 0;&#x2F;&#x2F;用户选择输入的变量</span><br><span class="line">	while (true) &#123;</span><br><span class="line">		showMenu();</span><br><span class="line">		cin &gt;&gt; select;</span><br><span class="line">		switch (select) &#123;</span><br><span class="line">		case 0:</span><br><span class="line">			cout &lt;&lt; &quot;再见&quot; &lt;&lt; endl;</span><br><span class="line">			system(&quot;pause&quot;);</span><br><span class="line">			return 0;</span><br><span class="line">			&#x2F;&#x2F;退出通讯录 </span><br><span class="line">		case 1:</span><br><span class="line">			addPerson(&amp;abs);</span><br><span class="line">			break;&#x2F;&#x2F;添加联系人</span><br><span class="line">		case 2:break;&#x2F;&#x2F;显示联系人</span><br><span class="line">		case 3:break;&#x2F;&#x2F;删除联系人</span><br><span class="line">		case 4:break;&#x2F;&#x2F;修改联系人</span><br><span class="line">		case 5:break;&#x2F;&#x2F;清空联系人</span><br><span class="line">		case 6:break;&#x2F;&#x2F;情况联系人</span><br><span class="line">		default:break;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1484408071&auto=1&height=66"></iframe>
 
       
@@ -395,7 +444,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99"><span class="toc-number">1.</span> <span class="toc-text">我的博客编写</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text">区块引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.3.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F"><span class="toc-number">1.4.</span> <span class="toc-text">无序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F"><span class="toc-number">1.5.</span> <span class="toc-text">有序</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C"><span class="toc-number">1.</span> <span class="toc-text">C++</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-C-%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text">1.C++基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BE%93%E5%85%A5%E3%80%81%E8%BE%93%E5%87%BA%E5%92%8C%E6%B3%A8%E9%87%8A%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">2.输入、输出和注释：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F"><span class="toc-number">1.3.</span> <span class="toc-text">3.常量与变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.4.</span> <span class="toc-text">4.关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%A0%87%E8%AF%86%E7%AC%A6%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">5.标识符命名规则：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">6.数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%AE%9E%E5%9E%8B"><span class="toc-number">1.7.</span> <span class="toc-text">7.实型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">1.8.</span> <span class="toc-text">8.字符型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">1.9.</span> <span class="toc-text">9.转义字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="toc-number">1.10.</span> <span class="toc-text">10.字符串型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.11.</span> <span class="toc-text">11.布尔类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.12.</span> <span class="toc-text">12.循环结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E8%B7%B3%E5%87%BA%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.13.</span> <span class="toc-text">13.跳出循环语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BB%BD%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99"><span class="toc-number">1.14.</span> <span class="toc-text">14.函数的份文件编写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%8C%87%E9%92%88"><span class="toc-number">1.15.</span> <span class="toc-text">15.指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E7%BB%93%E6%9E%84%E4%BD%93%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8-%E8%AF%AD%E6%B3%95"><span class="toc-number">1.16.</span> <span class="toc-text">16.结构体定义和使用-语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-%E7%BC%96%E5%86%99%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.17.</span> <span class="toc-text">19.编写通讯录管理系统</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
