@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>C++函数高级 | SpacetimeNo</title>
+  <title>算法 | SpacetimeNo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="函数高级">
+  <meta name="description" content="周报">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++函数高级">
-<meta property="og:url" content="http://example.com/2021/01/22/C++%E9%AB%98%E7%BA%A7/index.html">
+<meta property="og:title" content="算法">
+<meta property="og:url" content="http://example.com/2021/01/31/%E7%AE%97%E6%B3%95%E5%91%A8%E6%8A%A5/index.html">
 <meta property="og:site_name" content="SpacetimeNo">
-<meta property="og:description" content="函数高级">
+<meta property="og:description" content="周报">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-21T21:26:48.000Z">
-<meta property="article:modified_time" content="2021-01-23T20:38:47.473Z">
+<meta property="article:published_time" content="2021-01-31T01:26:48.000Z">
+<meta property="article:modified_time" content="2021-01-31T11:32:58.661Z">
 <meta property="article:author" content="Notingness">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -179,18 +179,14 @@
           </div>
           <div id="js-content" class="content-ll">
             
-
-    <i class="fa fa-thumb-tack"></i>
-    <font color=7D26CD>置顶</font>
-    <span class="post-meta-divider">|</span>
-  <article id="post-C++高级" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-算法周报" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C++函数高级
+      算法
     </h1>
   
 
@@ -206,41 +202,61 @@
 
 <!--显示阅读次数完毕-->
         
-        <a href="/2021/01/22/C++%E9%AB%98%E7%BA%A7/" class="archive-article-date">
-  	<time datetime="2021-01-21T21:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-22</time>
+        <a href="/2021/01/31/%E7%AE%97%E6%B3%95%E5%91%A8%E6%8A%A5/" class="archive-article-date">
+  	<time datetime="2021-01-31T01:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="函数高级"><a href="#函数高级" class="headerlink" title="函数高级"></a>函数高级</h1><a id="more"></a>
-<h2 id="1-函数默认参数"><a href="#1-函数默认参数" class="headerlink" title="1.函数默认参数"></a>1.函数默认参数</h2><p>在C++中，函数的形参列表中的形参是可以由默认值的<br>语法：</p>
-<blockquote>
-<p>返回类型 函数名 (参数 = 默认值){}</p>
+        <h1 id="周报"><a href="#周报" class="headerlink" title="周报"></a>周报</h1><a id="more"></a>
+<h2 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h2><blockquote>
+<p>题目描述<br>若一个数（首位不为零）从左向右读与从右向左读都一样，我们就将其称之为回文数。<br>例如：给定一个十进制数 5656，将 5656 加 6565（即把 5656 从右向左读），得到 121121 是一个回文数。<br>又如：对于十进制数 8787：<br>STEP1：87+78=16587+78=165<br>STEP2：165+561=726165+561=726<br>STEP3：726+627=1353726+627=1353<br>STEP4：1353+3531=48841353+3531=4884<br>在这里的一步是指进行了一次 NN 进制的加法，上例最少用了 44 步得到回文数 48844884。<br>写一个程序，给定一个 NN（2 \le N \le 102≤N≤10 或 N=16N=16）进制数 MM（100100 位之内），求最少经过几步可以得到回文数。如果在 3030 步以内（包含 3030 步）不可能得到回文数，则输出 Impossible!。<br>输入格式<br>两行，分别是 NN，MM。<br>输出格式<br>如果能在 3030 步以内得到回文数，输出格式形如 STEP=ans，其中 ansans 为最少得到回文数的步数。<br>否则输出 Impossible!。<br>输入输出样例<br>输入<br>10<br>87<br>输出<br>STEP=4  </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int func(int a &#x3D; 10,int b &#x3D;20,int c &#x3D; 30)&#123;</span><br><span class="line">    retuan a + b + c;</span><br><span class="line">&#125;&#x2F;&#x2F;这样写可以选择不传入一些值，而使用该函数默认的参数</span><br><span class="line">如：func();或func(10);</span><br><span class="line">但是如果某个位置已经有了默认的参数，那么从这个位置往后，从左到右都必须有默认值，否则编译器会报错</span><br><span class="line">如：int func(int a,int b &#x3D; 10,int c)&#123;</span><br><span class="line">    这样写编译器会报错</span><br><span class="line">    return a + b + c;</span><br><span class="line">&#125;</span><br><span class="line">如果函数声明中有默认参数，函数实现就不能有默认参数</span><br><span class="line">如：</span><br><span class="line">声明:int func(int a &#x3D; 10, int b &#x3D; 20, int c &#x3D; 30);</span><br><span class="line">实现：int func(int a &#x3D; 10,int b,int c)&#123;</span><br><span class="line">    return a + b + c;</span><br><span class="line">&#125;</span><br><span class="line">这样做编译时会报错</span><br></pre></td></tr></table></figure>
-<h2 id="2-函数占位参数"><a href="#2-函数占位参数" class="headerlink" title="2.函数占位参数"></a>2.函数占位参数</h2><p>C++中函数的形参列表里可以有占位参数，用来占位，调用函数时必须填补该位置<br>语法：</p>
-<blockquote>
-<p>返回类型 函数名 {数据类型}{}</p>
+<p>思路：先翻转然后30步跳出，只要把十进制中的10换成N，并编写一个打印函数,打印位上的值大于等于10的 即可。<br>题目没有明确位数个数，故数组均开到500</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line">int N,a[500],b[500],step&#x3D;0;</span><br><span class="line">char s[500];</span><br><span class="line">void add(int a[],int b[])&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i&#x3D;1;i&lt;&#x3D;a[0];i++)&#123;</span><br><span class="line">        a[i]+&#x3D;b[i];</span><br><span class="line">        a[i+1]+&#x3D;a[i]&#x2F;N;</span><br><span class="line">        a[i]%&#x3D;N;</span><br><span class="line">    &#125;</span><br><span class="line">    if(a[a[0]+1]&gt;0)a[0]+&#x3D;1;</span><br><span class="line">&#125;</span><br><span class="line">int judge(int a[])&#123;&#x2F;&#x2F;0非回文,1回文</span><br><span class="line">    int i;</span><br><span class="line">    for(i&#x3D;1;i&lt;&#x3D;a[0]&#x2F;2;i++)</span><br><span class="line">        if(a[i]!&#x3D;a[a[0]-i+1])</span><br><span class="line">            return 0;</span><br><span class="line">    return 1;</span><br><span class="line">&#125;</span><br><span class="line">void overturn(int a[])&#123;</span><br><span class="line">    int i,j&#x3D;0;</span><br><span class="line">    b[0]&#x3D;a[0];</span><br><span class="line">    for(i&#x3D;a[0];i&gt;&#x3D;1;i--)</span><br><span class="line">        b[++j]&#x3D;a[i];&#x2F;&#x2F;此处写成b[j]&#x3D;a[i],j++;</span><br><span class="line">&#125;</span><br><span class="line">void print(int a[])&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for(i&#x3D;a[0];i&gt;&#x3D;1;i--)</span><br><span class="line">        printf(&quot;%d&quot;,a[i]);</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int len,i,k&#x3D;0;</span><br><span class="line">    scanf(&quot;%d%s&quot;,&amp;N,s);</span><br><span class="line">    len&#x3D;strlen(s);</span><br><span class="line">    for(i&#x3D;len-1;i&gt;&#x3D;0;i--)&#x2F;&#x2F;重写读入数据的处理</span><br><span class="line">        if(&#39;0&#39;&lt;&#x3D;s[i]&amp;&amp;s[i]&lt;&#x3D;&#39;9&#39;)</span><br><span class="line">            a[++k]&#x3D;s[i]-&#39;0&#39;;</span><br><span class="line">        else if(&#39;a&#39;&lt;&#x3D;s[i]&amp;&amp;s[i]&lt;&#x3D;&#39;z&#39;)</span><br><span class="line">            a[++k]&#x3D;s[i]-&#39;a&#39;+10;</span><br><span class="line">        else if(&#39;A&#39;&lt;&#x3D;s[i]&amp;&amp;s[i]&lt;&#x3D;&#39;Z&#39;)</span><br><span class="line">            a[++k]&#x3D;s[i]-&#39;A&#39;+10;</span><br><span class="line">    a[0]&#x3D;len;</span><br><span class="line">    while(judge(a)&#x3D;&#x3D;0)&#123;</span><br><span class="line">        &#x2F;&#x2F;printf(&quot;1 &quot;),print(a);</span><br><span class="line">        overturn(a);</span><br><span class="line">        &#x2F;&#x2F;printf(&quot;2 &quot;),print(b);</span><br><span class="line">        add(a,b);</span><br><span class="line">        &#x2F;&#x2F;printf(&quot;3 &quot;),print(a);</span><br><span class="line">        step++;</span><br><span class="line">        if(step&#x3D;&#x3D;31)break;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    if(step&#x3D;&#x3D;31)printf(&quot;Impossible!&quot;);</span><br><span class="line">    else printf(&quot;STEP&#x3D;%d&quot;,step);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="旅行家的预算"><a href="#旅行家的预算" class="headerlink" title="旅行家的预算"></a>旅行家的预算</h2><blockquote>
+<p>一个旅行家想驾驶汽车以最少的费用从一个城市到另一个城市（假设出发时油箱是空的）。给定两个城市之间的距离D1D1、汽车油箱的容量CC（以升为单位）、每升汽油能行驶的距离D2D2、出发点每升汽油价格PP和沿途油站数NN（NN可以为零），油站ii离出发点的距离DiDi、每升汽油价格PiPi（i=1,2,…,Ni=1,2,…,N）。计算结果四舍五入至小数点后两位。如果无法到达目的地，则输出“No Solution”。<br>输入格式<br>第一行，D1D1，CC，D2D2，PP，NN。<br>接下来有NN行。<br>第i+1i+1行，两个数字，油站i离出发点的距离DiDi和每升汽油价格PiPi。<br>输出格式<br>所需最小费用，计算结果四舍五入至小数点后两位。如果无法到达目的地，则输出“No Solution”。<br>输入输出样例<br>输入<br>275.6 11.9 27.4 2.8 2<br>102.0 2.9<br>220.0 2.2<br>输出<br>26.95<br>说明/提示<br>N \le 6N≤6,其余数字\le 500≤500  </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;占位</span><br><span class="line">void func(int a,int);</span><br><span class="line">&#x2F;&#x2F;使用时，必须填补</span><br><span class="line">func(10,10);</span><br></pre></td></tr></table></figure>
-<h2 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h2><blockquote>
-<p>作用：函数名可以相同，提高复用性<br>函数重载满足条件：</p>
+<p>思路：考虑使用贪心算法，每次从近到远找遍所有可能到达的加油站。如果有油费比较低的，就先过去；如果没有，就先加满油，然后去最远的加油站</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">  #include&lt;algorithm&gt;</span><br><span class="line">  #include&lt;cstring&gt;</span><br><span class="line">  #include&lt;cstdio&gt;</span><br><span class="line">  #include&lt;cmath&gt;</span><br><span class="line">  using namespace std;</span><br><span class="line">  struct oil&#123;double dis,p;&#125;a[500];</span><br><span class="line">  int cmp(const oil a,const oil b)&#123;return a.dis&lt;b.dis;&#125;</span><br><span class="line">  double D,v;</span><br><span class="line"> double P,C,cn;</span><br><span class="line"> double ans&#x3D;0;</span><br><span class="line"> int n;</span><br><span class="line"> int main()&#123;</span><br><span class="line">     cin &gt;&gt; D&gt;&gt; C &gt;&gt; v &gt;&gt; P &gt;&gt; n;</span><br><span class="line">     int i,j;</span><br><span class="line">     for(i&#x3D;1;i&lt;&#x3D;n;i++)</span><br><span class="line">         scanf(&quot;%lf%lf&quot;,&amp;a[i].dis,&amp;a[i].p);</span><br><span class="line">      a[0].dis&#x3D;0;a[0].p&#x3D;P;</span><br><span class="line">      a[n+1].dis&#x3D;D;a[n+1].p&#x3D;0;n++;</span><br><span class="line">      sort(a,a+n+1,cmp);</span><br><span class="line">      int now&#x3D;0;cn&#x3D;0;</span><br><span class="line">       while(now&lt;n)&#123;</span><br><span class="line">         int pos&#x3D;0;</span><br><span class="line">          for(i&#x3D;now+1;i&lt;&#x3D;n;i++)&#123;</span><br><span class="line">              if(a[i].dis-a[now].dis&gt;C*v)break;</span><br><span class="line">              pos&#x3D;i;</span><br><span class="line">               if(a[i].p&lt;&#x3D;a[now].p)break;&#x2F;&#x2F;有油费更低的就先去 </span><br><span class="line">         &#125;</span><br><span class="line">          if(!pos)&#123;printf(&quot;No Solution\n&quot;);return 0;&#125;</span><br><span class="line">           double cost&#x3D;(a[pos].dis-a[now].dis)&#x2F;v;</span><br><span class="line">           if(a[pos].p&gt;a[now].p)&#123;</span><br><span class="line">              ans+&#x3D;(C-cn)*a[now].p;</span><br><span class="line">                cn&#x3D;C-cost;</span><br><span class="line">               now&#x3D;pos;</span><br><span class="line">          &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">             if(cn&gt;&#x3D;cost)&#123;</span><br><span class="line">                 cn-&#x3D;cost;</span><br><span class="line">                 now&#x3D;pos;</span><br><span class="line">             &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                 ans+&#x3D;(cost-cn)*a[now].p;</span><br><span class="line">                 now&#x3D;pos;</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     printf(&quot;%.2f\n&quot;,ans);</span><br><span class="line">     return 0;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="银行贷款"><a href="#银行贷款" class="headerlink" title="银行贷款"></a>银行贷款</h2><blockquote>
+<p>题目描述<br>当一个人从银行贷款后，在一段时间内他(她)将不得不每月偿还固定的分期付款。这个问题要求计算出贷款者向银行支付的利率。假设利率按月累计。<br>输入格式<br>三个用空格隔开的正整数。<br>第一个整数表示贷款的原值，第二个整数表示每月支付的分期付款金额，第三个整数表示分期付款还清贷款所需的总月数。<br>输出格式<br>一个实数，表示该贷款的月利率(用百分数表示)，四舍五入精确到0.1%0.1%。<br>输入输出样例<br>输入 #1复制<br>1000 100 12<br>输出 #1复制<br>2.9   </p>
 </blockquote>
-<ul>
-<li>同一个作用域下</li>
-<li>函数名相同 </li>
-<li>函数参 数类型不同 或者 个数不同 或者 顺序不同</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void func();</span><br><span class="line">void func(int a);&#x2F;&#x2F;可以同时存在，不会报错</span><br><span class="line">或</span><br><span class="line">void func(int b,int a);</span><br><span class="line">void func(int a,int b);&#x2F;&#x2F;可以同时存在，不会报错</span><br></pre></td></tr></table></figure>
-<p>注意：函数的返回值不可以作为函数重载的条件  </p>
-<h2 id="函数重载的注意事项"><a href="#函数重载的注意事项" class="headerlink" title="函数重载的注意事项"></a>函数重载的注意事项</h2><ul>
-<li>引用作为重载条件</li>
-<li>函数重载碰到函数默认参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void func(int a,int b &#x3D; 10)&#123;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">void func(int a)&#123;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">int main&#123;</span><br><span class="line">    func(10);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;&#x2F;&#x2F;这样做会报错，因为编译器不知道你要调用哪个函数，这个10既可以认为在调用第一个func，也可以认为你要调用第二个func，所以别这样做</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
+<p>思路：浮点数二分+数学<br>上面方程式可看为，以p为自变量的单调函数。（因为在分母）<br>那么利用二分，可以把p给找出来。<br>二分的判断条件：可以用等比数列求和公式来做<br>[1/（1+p)]^k=1-n/m*（p/（1+p））</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">double a,b,k,l,r;</span><br><span class="line">bool check(double x)&#123;&#x2F;&#x2F;判断当前答案是否满足</span><br><span class="line">    return (pow(1.0&#x2F;(1.0+x),k)&gt;&#x3D;1-n&#x2F;m*x); </span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b&gt;&gt;k;</span><br><span class="line">    l&#x3D;0;r&#x3D;10;&#x2F;&#x2F;月利率可能大于1</span><br><span class="line">    while(r-l&gt;&#x3D;0.0001)&#123;&#x2F;&#x2F;注意精度问题</span><br><span class="line">        double mid&#x3D;(l+r)&#x2F;2;</span><br><span class="line">        if(check(mid))r&#x3D;mid;</span><br><span class="line">        else l&#x3D;mid;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%.1f&quot;,l*100);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="烦恼的高考志愿"><a href="#烦恼的高考志愿" class="headerlink" title="烦恼的高考志愿"></a>烦恼的高考志愿</h2><p>题目背景<br>计算机竞赛小组的神牛V神终于结束了万恶的高考，然而作为班长的他还不能闲下来，班主任老t给了他一个艰巨的任务：帮同学找出最合理的大学填报方案。可是v神太忙了，身后还有一群小姑娘等着和他约会，于是他想到了同为计算机竞赛小组的你，请你帮他完成这个艰巨的任务。<br>题目描述<br>现有 m(m\le100000)m(m≤100000) 所学校，每所学校预计分数线是 a_i(a_i\le10^6)a i(a_i≤10^6)。有 n(n\le100000)n(n≤100000) 位学生，估分分别为 b_i(b_i\le10^6)b_i(b_i≤10^6)。<br>根据n位学生的估分情况，分别给每位学生推荐一所学校，要求学校的预计分数线和学生的估分相差最小（可高可低，毕竟是估分嘛），这个最小值为不满意度。求所有学生不满意度和的最小值。<br>输入格式<br>第一行读入两个整数m,n。m表示学校数，n表示学生数。第二行共有m个数，表示m个学校的预计录取分数。第三行有n个数，表示n个学生的估分成绩。<br>输出格式<br>一行，为最小的不满度之和。<br>输入输出样例<br>输入 #1复制<br>4 3<br>513 598 567 689<br>500 600 550<br>输出 #1复制<br>32<br>说明/提示<br>数据范围：<br>对于30%的数据，m，n&lt;=1000,估分和录取线&lt;=10000;  </p>
+<p>对于100%的数据，n,m&lt;=100,000,录取线&lt;=1000000。  </p>
+<p>思路:使用STL 自带的二分函数—— upper_bound 和 lower_bound<br>这两个函数的作用是二分查找一个数在数组中出现的位置。区别是 upper 返回第一个大于搜索数的位置，而 lower 是第一个大于等于的数的位置。<br>函数的用法：lower_bound(a.begin(),a.end(),x) 返回第一个大于等于 x 的数的地址。而由于是地址，在最后要 −a（也就是减去地址）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">#define fio std::ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn&#x3D;100000+5;</span><br><span class="line">int a[maxn],b[maxn];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    fio;    &#x2F;&#x2F;加速输入输出</span><br><span class="line">    int m,n,x;</span><br><span class="line">    long long sum&#x3D;0;</span><br><span class="line">    cin&gt;&gt;m&gt;&gt;n;</span><br><span class="line">    for(int i&#x3D;1;i&lt;&#x3D;m;i++)</span><br><span class="line">        cin&gt;&gt;a[i];</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)</span><br><span class="line">        cin&gt;&gt;b[i];</span><br><span class="line">    sort(a+1,a+m+1);&#x2F;&#x2F;一定要排序！！！不然全wa，亲测有效</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(b[i]&lt;&#x3D;a[1])       &#x2F;&#x2F;小于等于最小的</span><br><span class="line">            sum+&#x3D;abs(a[1]-b[i]);</span><br><span class="line">        else if(b[i]&gt;&#x3D;a[m])  &#x2F;&#x2F;大于等于最大的</span><br><span class="line">            sum+&#x3D;abs(a[m]-b[i]);</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            x&#x3D;upper_bound(a+1,a+m+1,b[i])-a;</span><br><span class="line">            sum+&#x3D;min(abs(a[x]-b[i]),abs(a[x-1]-b[i]));&#x2F;&#x2F;查找的b[i]在a[x]和a[x-1]之间</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="数字三角形"><a href="#数字三角形" class="headerlink" title="数字三角形"></a>数字三角形</h2><p>一个数字三角形。 请编一个程序计算从顶至底的某处的一条路<br>　　径，使该路径所经过的数字的总和最大。<br>　　●每一步可沿左斜线向下或右斜线向下走；<br>　　●1＜三角形行数≤100；<br>　　●三角形中的数字为整数0，1，…99；</p>
+<p>输入格式<br>　　文件中首先读到的是三角形的行数。</p>
+<p>　　接下来描述整个三角形<br>输出格式<br>　　最大总和（整数）<br>样例输入<br>5<br>7<br>3 8<br>8 1 0<br>2 7 4 4<br>4 5 2 6 5<br>样例输出<br>30</p>
+<p>思路：使用动态规划</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define max(x,y) (x&gt;y)?x:y</span><br><span class="line">int dp[200][200];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    int i,j;</span><br><span class="line">    for(i&#x3D;0;i&lt;n;i++)</span><br><span class="line">        for(j&#x3D;0;j&lt;&#x3D;i;j++)</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;dp[i][j]);</span><br><span class="line">    for(i&#x3D;n-2;i&gt;&#x3D;0;i--)</span><br><span class="line">        for(j&#x3D;0;j&lt;&#x3D;i;j++)</span><br><span class="line">            dp[i][j]+&#x3D;max(dp[i+1][j],dp[i+1][j+1]);</span><br><span class="line">    printf(&quot;%d\n&quot;,dp[0][0]);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="一元三次方程求解"><a href="#一元三次方程求解" class="headerlink" title="一元三次方程求解"></a>一元三次方程求解</h2><p>题目描述<br>有形如：a x^3 + b x^2 + c x + d = 0ax<br>3<br> +bx<br>2<br> +cx+d=0 这样的一个一元三次方程。给出该方程中各项的系数（a,b,c,da,b,c,d 均为实数），并约定该方程存在三个不同实根（根的范围在 -100−100 至 100100 之间），且根与根之差的绝对值 \ge 1≥1。要求由小到大依次在同一行输出这三个实根(根与根之间留有空格)，并精确到小数点后 22 位。</p>
+<p>提示：记方程 f(x) = 0f(x)=0，若存在 22 个数 x_1x<br>1<br>​<br>  和 x_2x<br>2<br>​<br> ，且 x_1 &lt; x_2x<br>1<br>​<br> &lt;x<br>2<br>​<br> ，f(x_1) \times f(x_2) &lt; 0f(x<br>1<br>​<br> )×f(x<br>2<br>​<br> )&lt;0，则在 (x_1, x_2)(x<br>1<br>​<br> ,x<br>2<br>​<br> ) 之间一定有一个根。</p>
+<p>输入格式<br>一行，44 个实数 a, b, c, da,b,c,d。</p>
+<p>输出格式<br>一行，33 个实根，从小到大输出，并精确到小数点后 22 位。</p>
+<p>输入输出样例<br>输入 #1复制<br>1 -5 -4 20<br>输出 #1复制<br>-2.00 2.00 5.00</p>
+<p>思路：暴力法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">  using namespace std;</span><br><span class="line">  const double eps&#x3D;1e-3;</span><br><span class="line">  double a,b,c,d;</span><br><span class="line">  int main()&#123;</span><br><span class="line">      double i,j;</span><br><span class="line">       cin&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;d;</span><br><span class="line">        for(i&#x3D;-100;i&lt;&#x3D;100;i+&#x3D;0.01)&#123;</span><br><span class="line">         if( fabs(a*i*i*i+b*i*i+c*i+d)&lt;&#x3D;eps )printf(&quot;%.2f &quot;i);</span><br><span class="line">     &#125;</span><br><span class="line">    return 0;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="质因数分解"><a href="#质因数分解" class="headerlink" title="质因数分解"></a>质因数分解</h2><p>题目描述<br>已知正整数nn是两个不同的质数的乘积，试求出两者中较大的那个质数。</p>
+<p>输入格式<br>一个正整数nn。</p>
+<p>输出格式<br>一个正整数pp，即较大的那个质数。</p>
+<p>输入输出样例<br>输入 #1复制<br>21<br>输出 #1复制<br>7<br>说明/提示<br>n\le 2\times 10^9n≤2×10^9</p>
+<p>思路:题目要求最后一个素数，那么找到第一个素数，再用n除以它就可以了。</p>
+<p>n%第一个素数恰好=0，那么只要找到第一个可以被n整除的数就可以。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int n,p;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    for(int i&#x3D;2;i&lt;&#x3D;n;i++)</span><br><span class="line">        if(n%i&#x3D;&#x3D;0)</span><br><span class="line">        &#123;</span><br><span class="line">            printf(&quot;%d&quot;,n&#x2F;i);</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="车厢重组"><a href="#车厢重组" class="headerlink" title="车厢重组"></a>车厢重组</h2><p>题目描述<br>在一个旧式的火车站旁边有一座桥，其桥面可以绕河中心的桥墩水平旋转。一个车站的职工发现桥的长度最多能容纳两节车厢，如果将桥旋转180180度，则可以把相邻两节车厢的位置交换，用这种方法可以重新排列车厢的顺序。于是他就负责用这座桥将进站的车厢按车厢号从小到大排列。他退休后，火车站决定将这一工作自动化，其中一项重要的工作是编一个程序，输入初始的车厢顺序，计算最少用多少步就能将车厢排序。</p>
+<p>输入格式<br>共两行。</p>
+<p>第一行是车厢总数N( \le 10000)N(≤10000)。</p>
+<p>第二行是NN个不同的数表示初始的车厢顺序。</p>
+<p>输出格式<br>一个整数，最少的旋转次数。</p>
+<p>输入输出样例<br>输入 #1复制<br>4<br>4 3 2 1<br>输出 #1复制<br>6</p>
+<p>思路：只需要一个个遍历然后投机需要交换的次数即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int n,sum;</span><br><span class="line">int a[10004];</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;++i)&#123; </span><br><span class="line">    	cin&gt;&gt;a[i];</span><br><span class="line">    &#125; </span><br><span class="line">    for(int i&#x3D;0;i&lt;n;++i)&#123; </span><br><span class="line">        for(int j&#x3D;0;j&lt;i;++j)&#123; </span><br><span class="line">            if(a[j]&gt;a[i])&#123; </span><br><span class="line">            	++sum;</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; </span><br><span class="line">    cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
 
       
@@ -252,7 +268,7 @@
         
         <br>
         <strong>本文链接：</strong>
-        http://example.com/2021/01/22/C++%E9%AB%98%E7%BA%A7/
+        http://example.com/2021/01/31/%E7%AE%97%E6%B3%95%E5%91%A8%E6%8A%A5/
         <br>
         <strong>版权声明：</strong>
         本作品采用
@@ -289,11 +305,6 @@
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
@@ -312,7 +323,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/C//" class="article-tag-list-link color4">C++</a>
+        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -367,7 +378,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=Notingness.github.io/021/01/22/C++%E9%AB%98%E7%BA%A7/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=Notingness.github.io/021/01/31/%E7%AE%97%E6%B3%95%E5%91%A8%E6%8A%A5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -381,18 +392,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/22/C++%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          C++类和对象 运算符
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/22/C++%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C++继承</div>
+    <a href="/2021/01/29/Linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -419,7 +421,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%AB%98%E7%BA%A7"><span class="toc-number">1.</span> <span class="toc-text">函数高级</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%87%BD%E6%95%B0%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1.函数默认参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%87%BD%E6%95%B0%E5%8D%A0%E4%BD%8D%E5%8F%82%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">2.函数占位参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="toc-number">1.3.</span> <span class="toc-text">函数重载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.4.</span> <span class="toc-text">函数重载的注意事项</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%A8%E6%8A%A5"><span class="toc-number">1.</span> <span class="toc-text">周报</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E6%96%87%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">回文数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%85%E8%A1%8C%E5%AE%B6%E7%9A%84%E9%A2%84%E7%AE%97"><span class="toc-number">1.2.</span> <span class="toc-text">旅行家的预算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%B6%E8%A1%8C%E8%B4%B7%E6%AC%BE"><span class="toc-number">1.3.</span> <span class="toc-text">银行贷款</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%A6%E6%81%BC%E7%9A%84%E9%AB%98%E8%80%83%E5%BF%97%E6%84%BF"><span class="toc-number">1.4.</span> <span class="toc-text">烦恼的高考志愿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="toc-number">1.5.</span> <span class="toc-text">数字三角形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3"><span class="toc-number">1.6.</span> <span class="toc-text">一元三次方程求解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3"><span class="toc-number">1.7.</span> <span class="toc-text">质因数分解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%A6%E5%8E%A2%E9%87%8D%E7%BB%84"><span class="toc-number">1.8.</span> <span class="toc-text">车厢重组</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
