@@ -16,7 +16,7 @@
 <meta property="og:description" content="java">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-31T01:26:48.000Z">
-<meta property="article:modified_time" content="2021-07-23T03:41:15.911Z">
+<meta property="article:modified_time" content="2021-07-24T11:32:09.848Z">
 <meta property="article:author" content="Notingness">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -211,7 +211,66 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><a id="more"></a>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>官网下载jdk 1.8并安装 </li>
+<li>打开电脑属性，配置java的环境变量</li>
+<li>创建JAVA_HOME的环境变量，变量值为jdk 1.8安装路径</li>
+<li>在path中新建两个环境变量：%JAVA_HOME%\bin与%JAVA_HOME%\jre\bin</li>
+<li>打开cmd输入java -version 如果显示版本号则表明java配置和安装成功</li>
+</ul>
+<h2 id="java运行注意事项"><a href="#java运行注意事项" class="headerlink" title="java运行注意事项"></a>java运行注意事项</h2><blockquote>
+<p>Java程序中main方法必须声明为public static void</p>
+</blockquote>
+<blockquote>
+<p>文件名必须与类名相同，即：.JAVA文件名应该与类名相同(否则会编译器会报错)</p>
+</blockquote>
+<blockquote>
+<p>相比于C++,java的数据类型中多了byte（一个字节范围-128~127）<br>而long类型的变量后面必须添加L（大小写均可）</p>
+</blockquote>
+<blockquote>
+<p>常量的声明（定义常量）：1)final 数据类型 常量名称[=值];如final int a=5</p>
+</blockquote>
+<h2 id="java中的常量"><a href="#java中的常量" class="headerlink" title="java中的常量"></a>java中的常量</h2><p>输出常量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F;输出整数 十进制</span><br><span class="line">        System.out.println(50);&#x2F;&#x2F;50</span><br><span class="line">        &#x2F;&#x2F;输出整数，二进制, 数字开头0B</span><br><span class="line">        System.out.println(0B11);&#x2F;&#x2F;3</span><br><span class="line">        &#x2F;&#x2F;输出整数，八进制，数字开头0</span><br><span class="line">        System.out.println(051);&#x2F;&#x2F;41</span><br><span class="line">        &#x2F;&#x2F;输出整数，十六进制，数组开头0X  0-9 A-F</span><br><span class="line">        System.out.println(0XE);&#x2F;&#x2F;14</span><br><span class="line">        &#x2F;&#x2F;输出浮点数据</span><br><span class="line">        System.out.println(5.0);&#x2F;&#x2F;5.0</span><br><span class="line">        &#x2F;&#x2F;输出布尔数据，只有2个值，true，false 关键字</span><br><span class="line">        System.out.println(true);&#x2F;&#x2F;true</span><br><span class="line">        System.out.println(false);&#x2F;&#x2F;false</span><br><span class="line">        &#x2F;&#x2F;输出字符常量，单引号包裹，只能写1个字符</span><br><span class="line">        System.out.println(&#39;a&#39;);&#x2F;&#x2F;a</span><br><span class="line">        &#x2F;&#x2F;输出字符串常量，双引号包裹，可以写0-n个字符</span><br><span class="line">        System.out.println(&quot;HelloWorld&quot;);&#x2F;&#x2F;HelloWorld</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Scanner类"><a href="#Scanner类" class="headerlink" title="Scanner类"></a>Scanner类</h2><p>Scanner类可以完成用户键盘录入，获取到录入的数据。</p>
+<p>Scanner使用步骤：</p>
+<blockquote>
+<p>数据类型  变量名  =  new 数据类型();</p>
+</blockquote>
+<p>调用</p>
+<blockquote>
+<p>变量名.方法名();</p>
+</blockquote>
+<p>导包：</p>
+<blockquote>
+<p>import java.util.Scanner;</p>
+</blockquote>
+<p>创建对象实例：</p>
+<blockquote>
+<p>Scanner sc = new Scanner(System.in);</p>
+</blockquote>
+<p>调用方法：</p>
+<blockquote>
+<p>int  i = sc.nextInt(); 用来接收控制台录入的数字<br>String s = sc.next(); 用来接收控制台录入的字符串</p>
+</blockquote>
+<p>实战编写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">public class ScannerDemo01 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F;创建Scanner引用类型的变量</span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        &#x2F;&#x2F;获取数字</span><br><span class="line">        System.out.println(&quot;请输入一个数字&quot;);</span><br><span class="line">        int n &#x3D; sc.nextInt();</span><br><span class="line">        System.out.println(&quot;n的值为&quot; + n);</span><br><span class="line">        &#x2F;&#x2F;获取字符串</span><br><span class="line">        String str &#x3D; sc.next();</span><br><span class="line">        System.out.println(&quot;str的值为&quot; + str);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="随机数类Random"><a href="#随机数类Random" class="headerlink" title="随机数类Random"></a>随机数类Random</h2><blockquote>
+<p>public int nextInt(int maxValue) 产生[0,maxValue)范围的随机整数，包含0，不包含maxValue；</p>
+</blockquote>
+<blockquote>
+<p>public double nextDouble()  产生[0,1)范围的随机小数，包含0.0，不包含1.0。</p>
+</blockquote>
+<p> Random使用方式:<br> import导包：</p>
+<blockquote>
+<p>java.util.Random </p>
+</blockquote>
+<p> 创建实例格式 </p>
+<blockquote>
+<p>Random 变量名 = new Random();</p>
+</blockquote>
+<p> 实列：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> import java.util.Random;</span><br><span class="line">public class RandomDemo &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F; 创建Random类的实例</span><br><span class="line">        Random r &#x3D; new Random();</span><br><span class="line">        &#x2F;&#x2F; 得到0-100范围内的随机整数，将产生的随机整数赋值给i变量</span><br><span class="line">        int i &#x3D; r.nextInt(100);</span><br><span class="line">        &#x2F;&#x2F;得到0.0-1.0范围内的随机小数，将产生的随机小数赋值给d变量</span><br><span class="line">        double d &#x3D; r.nextDouble();</span><br><span class="line">        System.out.println(i);</span><br><span class="line">        System.out.println(d);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -385,7 +444,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java"><span class="toc-number">1.</span> <span class="toc-text">java</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text"></span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java"><span class="toc-number">1.</span> <span class="toc-text">java</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E8%BF%90%E8%A1%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.2.</span> <span class="toc-text">java运行注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%B8%AD%E7%9A%84%E5%B8%B8%E9%87%8F"><span class="toc-number">1.3.</span> <span class="toc-text">java中的常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scanner%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">Scanner类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%B1%BBRandom"><span class="toc-number">1.5.</span> <span class="toc-text">随机数类Random</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
